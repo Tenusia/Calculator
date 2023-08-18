@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch a Sketch</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
+</head>
+
+<body onload="generateGrid()">
+    <div class="Header">Etch-a-Sketch!</div>
+    
+    <label for="GridSize">Grid size (between 1 and 100): </label>
+    <input type="number" id="GridSize" name="GridSize" min="1" max="100" value="16">
+    <input type="button" onclick="generateGrid()" value="Generate grid"> <br>
+    <div id="grid"></div>
+    
+    <div class="button-line">
+        <input type="button" onclick="clearBGC()" value="Clear">
+        <!-- <input type="button" onclick="paintToggle()" value="Paint Click / Auto"> -->
+        <input type="button" onclick="gridToggle()" value="Toggle grid">
+        <input type="button" onclick="eraser()" value="Eraser">
+        <input type="button" onclick="rainbowColor()" value="Rainbow Color">
+        <input type="button" onclick="singleRandomColor()" value="Random Color">
+    </div>
+    
+    <div class="colorPallette">
+        <div class="grid-container">
+            <div class="grid-head"> Color:</div>
+            <div class="grid-item1" onclick="changeColor('BLUE')"></div>
+            <div class="grid-item2" onclick="changeColor('RED')"></div>
+            <div class="grid-item3" onclick="changeColor('YELLOW')"></div>
+            <div class="grid-item4" onclick="changeColor('ORANGE')"></div>
+            <div class="grid-item5" onclick="changeColor('GREEN')"></div>
+            <div class="grid-item6" onclick="changeColor('VIOLET')"></div>
+            <div class="grid-item7" onclick="changeColor('BLACK')"></div>
+          </div>
+    </div>
+</body>
+</html>
