@@ -122,7 +122,7 @@ document.onkeydown = function keyInput(e) {
     if(e.key === "9") {changeValue(9)};
     if(e.key === "0") {changeValue(0)};
     if(e.key === ".") {changeValue('.')};
-    if(e.key === "-") {toggleMin()};
+    if(e.key === "_") {toggleMin()};
 
     if(e.key === "+") {changeOperator('+')};
     if(e.key === "-") {changeOperator('-')};
