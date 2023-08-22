@@ -5,6 +5,7 @@ let solution = 0;
 const valueNR = [];
 let singleNumber = 0;
 
+
 // const valueDisplay = document.querySelector('#value');
 
 const add = function(a, b) {
@@ -104,3 +105,27 @@ const result = function() {
     document.getElementById("value").innerText = solution;
 }
 
+document.onkeydown = function keyInput(e) {
+  console.log(e);
+    if(e.key === "1") {changeValue(1)};
+    if(e.key === "2") {changeValue(2)};
+    if(e.key === "3") {changeValue(3)};
+    if(e.key === "4") {changeValue(4)};
+    if(e.key === "5") {changeValue(5)};
+    if(e.key === "6") {changeValue(6)};
+    if(e.key === "7") {changeValue(7)};
+    if(e.key === "8") {changeValue(8)};
+    if(e.key === "9") {changeValue(9)};
+    if(e.key === "0") {changeValue(0)};
+    if(e.key === ".") {changeValue('.')};
+
+    if(e.key === "+") {changeOperator('+')};
+    if(e.key === "-") {changeOperator('-')};
+    if(e.key === "*") {changeOperator('*')};
+    if(e.key === "/") {changeOperator('/')};
+    if(e.key === "=") {result()};
+    if(e.key === "Enter") {result()};
+}
+
+//Optional
+//Add backspace to remove wrong input
