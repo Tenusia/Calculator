@@ -8,7 +8,36 @@
     <link rel="stylesheet" href="style.css">
     <script src="javascript.js"></script>
 </head>
-
+    <div id="container">
+        <div id="value">0</div>
+        <div id="buttons">
+            <div id="line 1">
+                <button type="7" onclick="changeValue(7)">7</button>
+                <button type="8" onclick="changeValue(8)">8</button>
+                <button type="9" onclick="changeValue(9)">9</button>
+                <button type="/" onclick="changeOperator('/')">/</button>
+            </div>
+            <div id="Line 2">
+                <button type="4" onclick="changeValue(4)">4</button>
+                <button type="5" onclick="changeValue(5)">5</button>
+                <button type="6" onclick="changeValue(6)">6</button>
+                <button type="*" onclick="changeOperator('*')">*</button>
+            </div>
+            <div id="Line 3">
+                <button type="1" onclick="changeValue(1)">1</button>
+                <button type="2" onclick="changeValue(2)">2</button>
+                <button type="3" onclick="changeValue(3)">3</button>
+                <button type="-" onclick="changeOperator('-')">-</button>
+            </div>
+            <div id="Line 4"></div>
+                <button type="0" onclick="changeValue(0)">0</button>
+                <button type="." onclick="changeValue('.')">.</button>
+                <button type="=" onclick="result()">=</button>
+                <button type="+" onclick="changeOperator('+')">+</button>
+            </div>
+        </div>
+        <button type="button" id="Clear" onclick="location.reload()">Clear</button>
+    </div>
 <body>
 </body>
 </html>

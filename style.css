@@ -4,3 +4,48 @@ body{
     max-width: 500px;
     margin: 20px auto;
 }
+
+#value {
+    font-size: 60px;
+    width: 425px;
+    overflow: hidden;
+    text-align: right;
+    background-color: blue;
+}
+
+#buttons {
+    display: inline-block;
+    justify-content: space-evenly;
+    background-color: red;
+}
+
+button {
+    display: inline-block;
+    width: 100px;
+    padding: 15px 40px;
+    margin: 4px 2px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+button:hover {background-color: #3e8e41}
+  
+button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#Clear {
+    width: 425px;
+}
+
+
