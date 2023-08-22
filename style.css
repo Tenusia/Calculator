@@ -5,18 +5,27 @@ body{
     margin: 20px auto;
 }
 
+#container {
+    background-color: rgb(175, 172, 172);
+    width: 430px;
+    height: 480px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
 #value {
     font-size: 60px;
     width: 425px;
     overflow: hidden;
     text-align: right;
-    background-color: blue;
+    background-color: rgb(155, 155, 231);
+    border-radius: 5px;
 }
 
 #buttons {
     display: inline-block;
     justify-content: space-evenly;
-    background-color: red;
+
 }
 
 button {
@@ -30,29 +39,28 @@ button {
     text-decoration: none;
     outline: none;
     color: #fff;
-    background-color: #4CAF50;
+    background-color: #2d382d;
     border: none;
     border-radius: 15px;
-    box-shadow: 0 9px #999;
+    box-shadow: 0 7px #999;
   }
 
 #small {
     padding: 5px 40px;
     font-size: 15px;
-    margin: 10px 2px;
+    margin: 15px 2px;
 }
-button:hover {background-color: #3e8e41}
+button:hover {background-color: #616761}
   
 button:active {
-    background-color: #3e8e41;
+    background-color: #313431;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
 
-
-
 #Clear {
     width: 425px;
+    margin-top: 15px;
 }
 
 
