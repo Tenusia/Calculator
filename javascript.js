@@ -86,6 +86,17 @@ const result = function() {
     document.getElementById("value").innerText = solution;
 }
 
+const toggleMin = function() {
+    if(singleNumber !==0 && valueNR.length !== 0) {
+        singleNumber = 0 - singleNumber;
+        document.getElementById("value").innerText = singleNumber;
+    }
+    else if(solution !== 0 && valueNR.length === 0) {
+        solution = 0 - solution;
+        document.getElementById("value").innerText = solution;
+    };
+}
+
 const backspace = function () {
         valueNR.pop();
         singleNumber = Number(valueNR.join(''));
@@ -111,6 +122,7 @@ document.onkeydown = function keyInput(e) {
     if(e.key === "9") {changeValue(9)};
     if(e.key === "0") {changeValue(0)};
     if(e.key === ".") {changeValue('.')};
+    if(e.key === "-") {toggleMin()};
 
     if(e.key === "+") {changeOperator('+')};
     if(e.key === "-") {changeOperator('-')};
