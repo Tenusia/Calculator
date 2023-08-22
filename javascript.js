@@ -33,23 +33,6 @@ const power = function(a, b) {
     return Math.pow(a, b);
 };
 
-const factorial = function(a) {
-    let counter = 0;
-    let arr = [];
-
-    if(a === 0) {
-    return 1;
-    }
-    else {
-    for (let index = 0; index < a; index++) {
-        arr[index] = a - counter;
-        counter++;
-    }
-
-    return arr.reduce((sum, current) => sum * current);
-    }
-};
-
 const operate = function(operator, firstNR, secondNR) {
     if(operator === "+") {return add(firstNR, secondNR)};
     if(operator === "-") {return substract(firstNR, secondNR)};
@@ -64,8 +47,6 @@ const changeValue = function(newValue) {
     if(newValue === '.' && valueNR.length === 0) {newValue = '0.'};
     if(newValue === '.' && (valueNR.includes('.') || valueNR.includes('0.'))) {return}
     else {
-        
-        console.table(valueNR);
         valueNR.push(newValue);
         singleNumber = Number(valueNR.join(''));
         document.getElementById("value").innerText = singleNumber;
@@ -105,6 +86,18 @@ const result = function() {
     document.getElementById("value").innerText = solution;
 }
 
+const backspace = function () {
+        valueNR.pop();
+        singleNumber = Number(valueNR.join(''));
+        document.getElementById("value").innerText = singleNumber;
+}
+
+const deleteValue = function () {
+    valueNR.length = 0;
+    singleNumber = Number(valueNR.join(''));
+    document.getElementById("value").innerText = singleNumber;
+}
+
 document.onkeydown = function keyInput(e) {
   console.log(e);
     if(e.key === "1") {changeValue(1)};
@@ -123,8 +116,11 @@ document.onkeydown = function keyInput(e) {
     if(e.key === "-") {changeOperator('-')};
     if(e.key === "*") {changeOperator('*')};
     if(e.key === "/") {changeOperator('/')};
+    if(e.key === "^") {changeOperator('POW')};
     if(e.key === "=") {result()};
     if(e.key === "Enter") {result()};
+    if(e.key === "Backspace") {backspace()};
+    if(e.key === "Delete") {deleteValue()};
 }
 
 //Optional
